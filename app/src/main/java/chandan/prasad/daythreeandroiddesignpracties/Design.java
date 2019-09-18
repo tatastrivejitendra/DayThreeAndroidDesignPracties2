@@ -1,6 +1,7 @@
 package chandan.prasad.daythreeandroiddesignpracties;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,13 +29,21 @@ public class Design extends Fragment {
         View design_layout = inflater.inflate(R.layout.fragment_design, container, false);
 
 
-        Button btn = design_layout.findViewById(R.id.design_btn);
+        final Button btn = design_layout.findViewById(R.id.design_btn);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setCancelable(true);
+                builder.setTitle("Design");
+                builder.setIcon(R.drawable.color);
+                builder.setMessage("Welcome");
+                builder.show();
+
                 Toast.makeText(getContext(),"Hi There Thank you",Toast.LENGTH_SHORT).show();
+
             }
         });
 

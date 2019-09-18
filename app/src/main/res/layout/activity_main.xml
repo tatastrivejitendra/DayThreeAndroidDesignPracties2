@@ -12,6 +12,8 @@
         android:layout_height="56dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="3dp"
         android:background="#999"
         app:menu="@menu/main" />
 
